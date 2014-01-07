@@ -1,136 +1,121 @@
-# 普段の情報収集
+## GoogleSpreadSheetの小ネタ
 
 [@GeckoTang](http://twitter.com/GeckoTang)
 
 ---
 
-## 巡回サイト
+## Caution!
 
-無し
-
----
-
-## 購読してるRSS
-
-無し
-
-<small>※ちょっと前までは10サイトくらいのRSS購読してましたがGoogleリーダーの終了とともに…</small>
+これから紹介する内容は「知ってるよwww」っていうものも含まれるかもしれません。
 
 ---
 
-えっ、じゃあこいつなんも追ってないわけ？
+## スプレッドシートとは
+
+- オンラインで使えるExcelのようなもの。  
+- Excelで使える機能や、大体の関数は使える。  
+- Excelのマクロ機能はない。  
+- その代わりにGoogle Apps Script(GAS)が使える。  
+- GASはJavaScriptがわかれば大体わかる。  
+- 色々な型式(xlsx, pdf, html...)でダウンロードできる
 
 ---
 
-最近はメールマガジンを購読してます。
+## よく使うやつをご紹介
+
+- 行、列見出しを固定する
+- データの検証と条件付き書式を使う
+- フィルタ機能を使う
+- 数字の表示書式を変更する
+- GASを使って、◯◯する
 
 ---
 
-## 購読中のメールマガジン
+## 行、列見出しを固定する
 
-- 【日刊】 [DailyJS](http://dailyjs.com/)
-- 【週刊】 [Web Design Weekly](http://web-design-weekly.com/)
-- 【週刊】 [CSS Weekly](http://css-weekly.com/)
-- 【週刊】 [JavaScript Weekly](http://javascriptweekly.com/)
-- 【週刊】 [Node Weekly ](http://nodeweekly.com/)
-- 【週刊】 [A Drip of JavaScript](http://designpepper.com/a-drip-of-javascript)
-- 【週刊】 [Web Tools Weekly](http://webtoolsweekly.com/)
+- 編集 > 行見出しを固定 > n行を固定  
+- 編集 > 列固定 > n列を固定
+- 固定された境界をドラッグして移動できる
 
-----
+![](img/ss1.png)
 
-どのメルマガも無料、メール版とウェブ版がある。<br>
-<small>[CodeGrid](http://www.codegrid.net/)を購読してるけど、有料。</small>
+<small>Excelだとこれやるの地味にめんどくさい…</small>
 
 ---
 
-## DailyJS
+### データの検証(1)
 
-毎日発行 : [最近の記事](http://dailyjs.com/2013/12/09/lmd-hoodie-mozilla/)
+- ドロップダウンリストを作成します。
+- セルを右クリック > データの検証 > リストを直接指定
+- 保存（消す場合は**検証を解除**を押す）
 
-- デベロッパ向けのニュースかライブラリなどを2つくらい。
-- 謎なJSのライブラリとかたまに出てきて面白い。
+![](http://gyazo.com/d2a67bd72b3ceb138e69b02f8fc0bb64.gif)
 
----
-
-## Web Tools Weekly
-
-水曜日発行 : [最近の記事](http://us5.campaign-archive1.com/?u=ea228d7061e8bbfa8639666ad&id=7478c0c27e&e=5e266581bd)
-
-- なぜが冒頭でJavaScriptの小ネタが入る。
-- ライブラリやプラグインなど他のメルマガでも紹介してるものを紹介する。
-- 他と違うのはウェブツールやウェブサービスを多めに紹介すること。
 
 ---
 
-## Web Design Weekly
+### データの検証(2)
 
-金曜日発行 : [最近の記事](http://web-design-weekly.com/blog/2013/12/10/web-design-weekly-118/)
+- リストを範囲で指定
+- 入力エリアのグリッドなアイコンをクリックして、好きなセルを選択することが出来る
+- 保存
 
-- 読み物、JS/CSS/HTMLのリソース
-- 情報量が多く充実してる
-- 作者はいい人
-
-----
-- <small>[このメルマガのストア](http://web-design-weekly.com/store/)で、ステッカーを買った時に、作者から **「ステッカー送ったよ！宛名漢字で書いたけど合ってるといいな！」** みたいなメールが届いた。
-届いた手紙の漢字だいたい合ってた。そういう訳も合って、一番気に入ってるメルマガ</small>
+![](http://gyazo.com/c3bd3da7fe027e7e3dd038569a868dbf.gif)
 
 ---
 
-## CSS Weekly
+### 条件付き書式
 
-金曜日発行 : [最近の記事](http://css-weekly.com/issue-87/)
+- セルの値によって色をつけたりする
+- 背景色と前面色を指定することが可能
+- 条件は色々ある（セルが**日付**かつ**明日**だったら〜とか
 
-- Web Design Weeklyと内容かぶる部分も多い。
-- SassとかCSSとかの情報が多い気がする。
-
----
-
-## Javascript Weekly
-
-金か土曜日発行 : [最近の記事](http://javascriptweekly.com/archive/158.html)
-
-- クライアントサイドとサーバーサイドのJavaScriptの情報
-- 毎度毎度情報多い
+![](http://gyazo.com/5851a23d92873dcb5795d876dd485c47.gif)
 
 ---
 
-## Node Weekly
+### フィルタ機能を使う
 
-木か金曜日発行 : [最近の記事](http://nodeweekly.com/archive/12.html)
+- Data > フィルタ
+- １行目が見出し行になり、昇降のソートや情報のフィルタが出来る。
 
-- Node.jsの情報が主
-- でもそこまでNode.jsわからないから微妙に読めてない
+![](http://gyazo.com/200077ede2401e261ca2285e02cb0e2a.gif)
+
+<small>※並び替えたい範囲を選択して、右クリックから**範囲を並び替え...**とかでもよい。</small>
+---
+
+### 数字の表示書式を変更する
+
+![](img/ss2.png)
 
 ---
 
-## A Drip of Javascript
+### GASを使ってHello Worldする
 
-週刊だけど不定期 : [最近の記事](http://us6.campaign-archive1.com/?u=2cc20705b76fa66ab84a6634f&id=38748d10f8&e=2b1c4122cf)
+どうみてもJavaScriptです
 
-主に、JavaScriptの小ネタみたいなのを紹介してる
+```
+function myFunction() {
+  Browser.msgBox("Hello World！");
+}
+```
 
----
+- ツール > スクリプトエディタ
+- コードを入力して、⌘ + Sで保存
+- リソース > 現在のプロジェクトのトリガー > 編集時
 
-## メルマガにした理由
+![](http://gyazo.com/8d49bf42c44c1898ae601c141d159121.png)
 
-- 勝手に定期的に届く
-- ある程度、情報が洗練されてる（これが大きい）
-- タイトルと概要くらいならオフラインでも見れる
-- 複数のメルマガを比較すると流行ってる奴がわかる
-- 英語
-
-----
-
-<small>※自分で毎日精査するのめんどくなった</small>
+こうすると編集する度にアラートが出る。
 
 ---
 
-## ちなみに情報収集の流れ
+### GASで出来ることの一部
 
-- メルマガ届く
-- 気になるリンクをとりあえず全部開く
-- よほど気にならない限りは全体を流し読み。
-- 読んだらはてブに思い出しやすいキーワードでタグ付け
+- メアド一覧のスプレッドシートから、全員にメール送信
+- ガントチャートなどを作る
+- TODOリストを作って定期的にメール送信し、進捗報告
+- 外部サイトのRSSを取得して毎日メールで整形して送信
 
 ---
 
